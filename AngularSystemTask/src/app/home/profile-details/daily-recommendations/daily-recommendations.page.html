@@ -1,0 +1,45 @@
+<ion-content class="rec-bg">
+  <div class="d-flex align-items-center ion-padding">
+    <ion-icon name="arrow-back-outline" class="back" (click)="backToProfile()"></ion-icon>
+    <span class="pl-1 title">Daily Recommendations</span>
+  </div>
+  <ion-card class="card ab" *ngFor="let cardData of profileList">
+    <img src="{{cardData.image}}" alt="" class="w100">
+    <div class="ion-padding">
+      <div class="d-flex">
+        <div class="d-flex align-items-center">
+          <div class="verify"><ion-icon name="shield-checkmark-outline"></ion-icon><span class="pl-1">Verified</span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="pl-1 premium"><ion-icon name="shield-checkmark-outline"></ion-icon><span class="pl-1">Premium
+              NRI</span></div>
+        </div>
+      </div>
+      <div class="ion-padding-top"></div>
+      <b>{{cardData.name}}</b>
+      <div class="ion-padding-top fs12">
+        {{cardData.line1}},
+        <br>{{cardData.line2}},
+        <br>{{cardData.line3}}.
+      </div>
+      <div class="br"></div>
+      <div class="d-flex pt-1">
+        <div class="d-flex align-items-center">
+          <ion-icon name="star-outline" (click)="open()"></ion-icon>
+          <div class="pl-1">Shortlist</div>
+        </div>
+        <div class="ml-auto d-flex align-items-center">
+          <b>Like her?</b>
+          <div class="pl-1"></div>
+          <button fill="solid" expand="block" class="yes-btn" (click)="openYes()"><ion-icon name="checkmark-outline"
+              class="fs15"></ion-icon>
+          </button>
+          <div class="pl-1"></div>
+          <button fill="solid" expand="block" class="no-btn" (click)="openNo()"> <ion-icon name="close"
+              class="fs15"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-card>

@@ -1,0 +1,19 @@
+<ion-toolbar class="bar">
+  <div class="d-flex align-items-center">
+    <ion-icon name="arrow-back-outline" class="back" (click)="backtoProfile()"></ion-icon>
+    <ion-title class="header"> View Profile Detail</ion-title>
+  </div>
+</ion-toolbar>
+<ion-content>
+  <ion-card class="cus-card">
+    <img src="{{profileService.viewProfile.image}}" alt="" class="w100">
+    <div class="ion-padding">
+      <b>{{profileService.viewProfile.name}}</b>
+      <div class="ion-padding-top fs12">
+        {{profileService.viewProfile.line1}},
+        <br>{{profileService.viewProfile.line2}},
+        <br>{{profileService.viewProfile.line3}}.
+      </div>
+    </div>
+  </ion-card>
+</ion-content>

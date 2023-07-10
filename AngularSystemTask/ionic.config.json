@@ -1,0 +1,7 @@
+{
+  "name": "myFNPF",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
